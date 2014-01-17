@@ -1,0 +1,12 @@
+\.DS_Store
+*~
+tsc_*
+*.pyc
+*.zip
+html/
+Salida/
+DocumentosProcesar/
+use_uf/
+epy.conf
+generadoc*
+

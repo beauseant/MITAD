@@ -1,0 +1,27 @@
+Ver el documento EspecificacionRequ.doc para ver la especificación de requisitos.
+
+
+
+PROGRAMA PRINCIPAL:
+
+Los documentos se encuentran en el directorio llamado Documentos. Venían con al mapa de caracteres típico del notepad del Windows, por lo que hay que convertirlos a UTF8, con el fin de evitar problemas con el python. Por ello, el primer paso antes de lanzar el programa en python se debe ejecutar primero el script convertirUTF8.sh, el cual se encarga de tomar un directorio como parámetro y convertir todos los ficheros a ese formato (convertir el contenido, no sólo el nombre del mismo).
+
+	convertirUTF8.sh DocumentosPrueba/Manual/
+        convertirUTF8.sh DocumentosPrueba/Frec/
+        convertirUTF8.sh DocumentosPrueba/Sem/
+        convertirUTF8.sh DocumentosPrueba/FrecSem/
+	python main.py DocumentosPrueba/Manual/ DocumentosPrueba/Frec Documentos/FrecSem/ Documentos/Sem/ Salida/ --compara 5 --compara 10 --compara 15
+	
+
+TERMINOS USE / UF
+
+En muchos documentos es necesario sustituir algunas palabras por el término recomendado. En el fichero use_uf/use_uf.csv se encuentran la lista de palabras. Las palabras de la segunda columna de ese fichero deberían ser sustituidas por la palabra correspondiente de la primera. Para hacer eso se ha creado el programa sustituir_use_uf.py:
+
+	convertirUTF8.sh use_uf/EliminarNoPreferentes/Frec
+	convertirUTF8.sh use_uf/EliminarNoPreferentes/Sem
+	convertirUTF8.sh use_uf/EliminarNoPreferentes/Mixta
+	Aquñi no hay ficheros manual.
+	python sustituir_use_uf.py use_uf/USE-UF.csv use_uf/EliminarNoPreferentes/ use_uf/SalidaFicheros/ txt
+
+Con esto ya dejamos los ficheros listos para usarlos con el programa principal.
+
